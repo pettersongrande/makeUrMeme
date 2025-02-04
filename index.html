@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make UR Meme</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="mainContainer">
+
+        <div class="logoContainer">
+            <h1>Make Ur Meme</h1>
+        </div>
+
+        <div class="formContainer">
+            <form action="" method="get" class="memeForm">
+
+                <div class="memeForm imgLink">
+                    <label for="imgLink"> </label>
+                    <input type="text" name="link" placeholder="GIF/IMG Link" required>
+                </div>
+
+                <div class="memeForm memeFactory">
+                    <label for="imgLink"> </label>
+                    <input type="text" name="topSentence" placeholder="Top Sentence">
+                </div>
+
+                <div class="memeForm memeFactory">
+                    <label for="imgLink"> </label>
+                    <input type="text" name="bottomSentence" placeholder="Bottom Sentence">
+                </div>
+                
+                <div class="memeForm">
+                    <!-- <input type="submit" value="MemeMixer"> -->
+                    <button id="subBtm" type="button">MemeMixer</button>
+                </div>
+            </form>
+
+            <div class="allMemes"></div>
+        </div>        
+
+        <div class="userMemesContainer">
+            <div>img1</div>
+            <div>img2</div>
+            <div>img3</div>
+
+        </div>
+
+    </div> 
+<script href="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* CSS RESET */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+
+}
+
+
+/* CSS RESET FOR OLDER BROWSERS */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    
+    display: block;
+}
+
+body {
+
+    line-height: 1;
+
+}
+
+blockquote, q {
+    
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+
+    content: '';
+    content: none;
+
+}
+
+table {
+    
+    border-collapse: collapse;
+    border-spacing: 0;
+
+}
+
+strong, b {
+
+    font-weight: bold;
+
+}
+
+em, i {
+
+    font-style: italic;
+
+}
+
+a img {
+    
+    border: none;
+
+}
+
+/* END RESET */
+
+/* INDEX PAGE STYLES */
+
+html {
+
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    font-family: 'Helvetica Neue',sans-serif;
+    color: #000;
+
+}
+
+/* PAGE STYLES */
+
+.mainContainer {
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 20vh 15vh  75vh;
+    grid-template-areas: 
+    "lfSpace logo      rspace"
+    "lfspace form      rspace"
+    "lfspace memesArea rspace";
+}
+
+/* LOGO CONTAINER  */
+
+.logoContainer {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+/* FORM CONTAINER  */
+.memeForm {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;    
+}
+
+.logoContainer h1{
+    font-size: 2em;
+    color: crimson;
+}
+
+.formContainer {
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer input {
+    border-radius: 0.5em;
+    padding: 0.4em;
+    margin: 0.2em;
+    width: 50vw;
+    align-items: center;
+}
+
+#subBtm {
+    width: 25vw;
+    align-self: center;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+
+/* MEMES CONTAINER */
+
+.userMemesContainer{
+    grid-area: memesArea;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    
+}
+
+.userMemesContainer div {
+    border: solid red 1px;
+    margin: 0.5em;
+    border-radius: 0.5em;
+    height: 25vh;
+    width: 20vw;
+
+}
