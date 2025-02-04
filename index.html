@@ -12,44 +12,41 @@
     <div class="mainContainer">
 
         <div class="logoContainer">
-            <h1>Make Ur Meme</h1>
+            <h1>Make UR Meme</h1>
         </div>
 
         <div class="formContainer">
-            <form action="" method="get" class="memeForm">
+
+            <form class="formContainer memeForm" id="mainForm">
 
                 <div class="memeForm imgLink">
-                    <label for="imgLink"> </label>
-                    <input type="text" name="link" placeholder="GIF/IMG Link" required>
+                    <label for="imgLink"></label>
+                    <input type="text" name="link" id="imgLink" placeholder="GIF/IMG Link" required>
                 </div>
 
                 <div class="memeForm memeFactory">
-                    <label for="imgLink"> </label>
-                    <input type="text" name="topSentence" placeholder="Top Sentence">
+                    <label for="topTxt"></label>
+                    <input type="text" name="topSentence" id="topTxt" placeholder="Top Sentence">
                 </div>
 
                 <div class="memeForm memeFactory">
-                    <label for="imgLink"> </label>
-                    <input type="text" name="bottomSentence" placeholder="Bottom Sentence">
+                    <label for="btmTxt"></label>
+                    <input type="text" name="bottomSentence" id='btmTxt' placeholder="Bottom Sentence">
                 </div>
                 
                 <div class="memeForm">
-                    <!-- <input type="submit" value="MemeMixer"> -->
-                    <button id="subBtm" type="button">MemeMixer</button>
+                    <button id="subBtm" type="submit">MemeMixer</button>
                 </div>
             </form>
 
-            <div class="allMemes"></div>
         </div>        
 
-        <div class="userMemesContainer">
-            <div>img1</div>
-            <div>img2</div>
-            <div>img3</div>
+        <div class="userMemesContainer" id="memesContainer">
 
         </div>
 
-    </div> 
-<script href="app.js"></script>
+    </div>
+
+<script src="app.js"></script>
 </body>
 </html>

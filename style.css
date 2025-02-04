@@ -108,6 +108,8 @@ html {
     color: crimson;
 }
 
+
+
 .formContainer {
     grid-area: form;
     display: flex;
@@ -136,7 +138,7 @@ html {
 .userMemesContainer{
     grid-area: memesArea;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: baseline;
     flex-wrap: wrap;
     
@@ -149,4 +151,11 @@ html {
     height: 25vh;
     width: 20vw;
 
+}
+
+/* MEMES IMGS */
+
+div img {
+    width: 19vw;
+    height: 24vh;
 }
