@@ -83,7 +83,7 @@ html {
     grid-template-areas: 
     "lfSpace logo      rspace"
     "lfspace form      rspace"
-    "lfspace memesArea rspace";
+    "lfspace memesArea trash";
 }
 
 /* LOGO CONTAINER  */
@@ -104,8 +104,8 @@ html {
 }
 
 .logoContainer h1{
-    font-size: 2em;
-    color: crimson;
+    font-size: 4em;
+    color: purple;
 }
 
 
@@ -123,9 +123,10 @@ html {
     margin: 0.2em;
     width: 50vw;
     align-items: center;
+    text-align: center;
 }
 
-#subBtm {
+#subBtm, .btns {
     width: 25vw;
     align-self: center;
     border-radius: 1em;
@@ -158,4 +159,22 @@ html {
 div img {
     width: 19vw;
     height: 24vh;
+}
+
+.trashCan {
+    font-size: 4em;
+    color: purple;
+    border: none;
+    grid-area: trash;
+    height: 10vh;
+    width: 10vw;
+    border-radius: 2em;
+    cursor: pointer;
+    
+    
+}
+
+.trashCan:hover {
+    border: 1px solid purple;
+    
 }
