@@ -79,7 +79,7 @@ html {
     background-color: #eee;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 20vh 15vh  75vh;
+    grid-template-rows: 10vh 18vh  80vh;
     grid-template-areas: 
     "lfSpace logo      rspace"
     "lfspace form      rspace"
@@ -139,15 +139,13 @@ html {
 .userMemesContainer{
     grid-area: memesArea;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-around;
     align-items: baseline;
     flex-wrap: wrap;
     
 }
 
 .userMemesContainer div {
-    border: solid red 1px;
-    margin: 0.5em;
     border-radius: 0.5em;
     height: 25vh;
     width: 20vw;
@@ -157,10 +155,13 @@ html {
 /* MEMES IMGS */
 
 div img {
-    width: 19vw;
-    height: 24vh;
+    width: 22vw;
+    height: 30vh;
+    border-radius: 2em;
 }
 
+
+/* DELETE ALL BUTTON */
 .trashCan {
     font-size: 4em;
     color: purple;
