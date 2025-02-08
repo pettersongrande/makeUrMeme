@@ -10,7 +10,7 @@ const LS_NAME       = "allImgObjs";
 // Array of Objects
 const allObjs = retrieveFromLocalStorage(LS_NAME);
 
-// alert('Hello there, welcome to  Make Your Meme. INSTRUCTIONS choose a gif or image of your choice copy and paste its link in the first field. Next, add captions. You can add top and bottom, but If you did not enjoy your new creation you can double click in the image and it will disappear. The trash button on the right will delete all your memes, so be careful or not...');
+alert('Hello there, welcome to  Make Your Meme. INSTRUCTIONS choose a gif or image of your choice copy and paste its link in the first field. Next, add captions. You can add top and bottom, but If you did not enjoy your new creation you can double click in the image and it will disappear. The trash button on the right will delete all your memes, so be careful or not...');
 
 renderPage(allObjs, memeDisplay);
 
