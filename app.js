@@ -33,8 +33,8 @@ form.addEventListener('submit',(e)=>{
     allObjs.push(newObj);
     
     // Create new IMAGE
-    const newImg = imgCreator(allObjs[indexNumber].img, indexNumber);
-
+    const newImg = imgCreator(allObjs[indexNumber].img, indexNumber, allObjs[indexNumber].captionOne, allObjs[indexNumber].captionTwo);
+    console.log(topString);
      // Saving to Local Storage
     saveToLocalStorage(LS_NAME,allObjs);
     
@@ -88,7 +88,7 @@ function renderPage(arrayOfObjects, displayArea){
     displayArea.innerHTML = '';
 
     for(let i = 0; i < arrayOfObjects.length; i++){
-        displayArea.append(imgCreator(arrayOfObjects[i].img, i));
+        displayArea.append(imgCreator(arrayOfObjects[i].img, i, arrayOfObjects[i].captionOne, arrayOfObjects[i].captionTwo));
     };
 
 };
@@ -110,14 +110,29 @@ function objectFactory(imgSrc, txt1, txt2){
 // CREATE IMG AND DIV from OBJECT
 // Parameter 1: object.img >> imgSrc
 // Return: new img element.
-function imgCreator(imgSrc, indexNumber){
+function imgCreator(imgSrc, indexNumber, objText1, ObjText2){
     const newDiv = document.createElement('DIV');
+    newDiv.classList.add('memeCard');
+
     const newImg = document.createElement('IMG');
+    newImg.classList.add('imgClass');
     newImg.dataset.indxNum = indexNumber;
     newImg.setAttribute("src", imgSrc);
-    newDiv.innerHTML = newImg;  
+    newDiv.append(newImg);
 
-    return newImg;
+    const topMsg = document.createElement('P');
+    topMsg.classList.add('memeCard', 'topMsg');
+    topMsg.innerHTML = objText1;
+    newDiv.append(topMsg);
+
+    const btmMsg = document.createElement('P');
+    btmMsg.classList.add('memeCard','btmMsg');
+    btmMsg.innerHTML = ObjText2;
+    newDiv.append(btmMsg);   
+    
+    
+
+    return newDiv;
 
 };
 
@@ -141,16 +156,6 @@ function retrieveFromLocalStorage(storageName){
 };
 
 // AREA FOR TESTING ---------------------------------------------------------
-function testingLoop(arrayOfObjects){
 
-    for(let links of arrayOfObjects){
-        console.log(links.img)
-    }
-
-    // for (let i = 0; i < arrayOfObjects.length; i++){
-    //     console.log(arrayOfObjects[i].img);
-    // };
-};
-// testingLoop(allObjs)
 
 

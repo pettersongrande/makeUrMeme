@@ -81,8 +81,8 @@ html {
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 10vh 18vh  80vh;
     grid-template-areas: 
-    "lfSpace logo      rspace"
-    "lfspace form      rspace"
+    "logo    logo      logo"
+    "form    form      form"
     "lfspace memesArea trash";
 }
 
@@ -90,9 +90,18 @@ html {
 
 .logoContainer {
     grid-area: logo;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+    background-color: lightcyan;
+    text-align: center;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    z-index: 1;
+    
+}
+
+.logoContainer h1{
+    font-size: 4em;
+    color: purple;
     
 }
 
@@ -100,21 +109,17 @@ html {
 .memeForm {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;    
+    flex-direction: column;
+        
 }
-
-.logoContainer h1{
-    font-size: 4em;
-    color: purple;
-}
-
-
 
 .formContainer {
+    background-color: lightcyan;
     grid-area: form;
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .formContainer input {
@@ -152,14 +157,49 @@ html {
 
 }
 
-/* MEMES IMGS */
+/* MEMES IMG and TEXT */
 
-div img {
-    width: 22vw;
+.memeCard {
+    position: relative;
+    width: 30vw;
     height: 30vh;
-    border-radius: 2em;
+    border-radius: 1em;
+    
 }
 
+.imgClass { 
+    /* display: none;    */
+    position: absolute;
+    width: 30vw;
+    height: 30vh;
+    border-radius: 1em;
+    border: 1px solid lightcoral;  
+   
+}
+
+.topMsg, .btmMsg{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000;
+    border-radius: 0.5em;
+    width: 27vw;
+    height: 2vh;
+    left: 0.4em;
+    padding: 0.6em;
+    font-weight: bolder;
+    background-color: hsla(0, 0%, 93%, 0.288);
+    text-align: center;
+    position: absolute;
+}
+
+.topMsg {
+    top: 0.2em;
+
+}
+
+.btmMsg {
+    bottom: -2.8em;
+
+}
 
 /* DELETE ALL BUTTON */
 .trashCan {
