@@ -10,7 +10,7 @@ const LS_NAME       = "allImgObjs";
 // Array of Objects
 const allObjs = retrieveFromLocalStorage(LS_NAME);
 
-alert('Hello there, welcome to  Make Your Meme. INSTRUCTIONS choose a gif or image of your choice copy and paste its link in the first field. Next, add captions. You can add top and bottom, but If you did not enjoy your new creation you can double click in the image and it will disappear. The trash button on the right will delete all your memes, so be careful or not...');
+// alert('Hello there, welcome to  Make Your Meme. INSTRUCTIONS choose a gif or image of your choice copy and paste its link in the first field. Next, add captions. You can add top and bottom, but If you did not enjoy your new creation you can double click in the image and it will disappear. The trash button on the right will delete all your memes, so be careful or not...');
 
 renderPage(allObjs, memeDisplay);
 
@@ -84,13 +84,23 @@ deleteButton.addEventListener('click', (e)=>{
 // Parameter 1: the array where the objects are stored
 // Parameter 2: the area where the images must be displayed
 // Return: nothing;
+
+// function renderPage(arrayOfObjects, displayArea){
+//     displayArea.innerHTML = '';
+
+//     for(let i = 0; i < arrayOfObjects.length; i++){
+//         displayArea.append(imgCreator(arrayOfObjects[i].img, i, arrayOfObjects[i].captionOne, arrayOfObjects[i].captionTwo));
+//     };
+
+// };
+
+// Replaced RenderPage syntex from for loop to forEach --------------------------------------------------------------------------------------
 function renderPage(arrayOfObjects, displayArea){
-    displayArea.innerHTML = '';
+        displayArea.innerHTML = '';
 
-    for(let i = 0; i < arrayOfObjects.length; i++){
-        displayArea.append(imgCreator(arrayOfObjects[i].img, i, arrayOfObjects[i].captionOne, arrayOfObjects[i].captionTwo));
-    };
-
+        arrayOfObjects.forEach((objKey, arrIdx)=>{
+            displayArea.append(imgCreator(objKey.img, arrIdx, objKey.captionOne, objKey.captionTwo));
+        });
 };
 
 // CREATE OBJECT FROM USERINPUT
@@ -128,14 +138,11 @@ function imgCreator(imgSrc, indexNumber, objText1, ObjText2){
     const btmMsg = document.createElement('P');
     btmMsg.classList.add('memeCard','btmMsg');
     btmMsg.innerHTML = ObjText2;
-    newDiv.append(btmMsg);   
-    
-    
+    newDiv.append(btmMsg);    
 
     return newDiv;
 
 };
-
 
 //ADD TO LOCAL STORAGE
 //Parameter 1: storage name and the objecs to be saved
